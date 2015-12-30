@@ -1,6 +1,13 @@
 # Change Log
 
-## [1.0.0](https://github.com/ericclemmons/reload-server-webpack-plugin/tree/1.0.0) (2015-12-29)
+## [1.0.1](https://github.com/ericclemmons/reload-server-webpack-plugin/tree/1.0.1) (2015-12-30)
+[Full Changelog](https://github.com/ericclemmons/reload-server-webpack-plugin/compare/v1.0.0...1.0.1)
+
+**Fixed bugs:**
+
+- Export to module.exports [\#2](https://github.com/ericclemmons/reload-server-webpack-plugin/pull/2) ([ericclemmons](https://github.com/ericclemmons))
+
+## [v1.0.0](https://github.com/ericclemmons/reload-server-webpack-plugin/tree/v1.0.0) (2015-12-30)
 **Implemented enhancements:**
 
 - Initial Release [\#1](https://github.com/ericclemmons/reload-server-webpack-plugin/pull/1) ([ericclemmons](https://github.com/ericclemmons))

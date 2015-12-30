@@ -1,6 +1,6 @@
 {
   "name": "reload-server-webpack-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack plugin that automatically (re)starts your server between builds.",
   "main": "index.js",
   "files": [
