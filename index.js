@@ -1,1 +1,1 @@
-module.exports = require("./dist/ReloadServerPlugin.js");
+module.exports = require("./build/ReloadServerPlugin.js");

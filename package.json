@@ -5,10 +5,10 @@
   "main": "index.js",
   "files": [
     "index.js",
-    "dist"
+    "build"
   ],
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "babel src -d build",
     "changelog": "npm run changelog:generate && npm run changelog:add",
     "changelog:add": "git add CHANGELOG.md",
     "changelog:generate": "github_changelog_generator --future-release $npm_package_version",
