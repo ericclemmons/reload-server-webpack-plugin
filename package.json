@@ -16,9 +16,7 @@
     "preversion": "npm run build",
     "postversion": "npm run version:amend && npm run publish",
     "publish": "git push orign master --tags",
-    "test": "if-env NODE_ENV=test && npm run test:coverage || npm run test:watch",
-    "test:coverage": "nyc mocha",
-    "test:watch": "mocha --watch",
+    "test": "nyc mocha",
     "version": "npm run changelog",
     "version:amend": "git commit --amend -m \"Release v${npm_package_version}\""
   },
@@ -46,7 +44,6 @@
     "babel-register": "^6.3.13",
     "coveralls": "^2.11.6",
     "expect": "^1.13.4",
-    "if-env": "^1.0.0",
     "mocha": "^2.3.4",
     "nyc": "^5.0.1"
   }
