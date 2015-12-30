@@ -15,7 +15,7 @@
     "coverage": "NODE_ENV=test npm test && nyc report --reporter=text-lcov | coveralls",
     "preversion": "npm run build",
     "postversion": "npm run version:amend && npm run publish",
-    "publish": "git push orign master --tags",
+    "publish": "git push origin master --tags",
     "test": "nyc mocha",
     "version": "npm run changelog",
     "version:amend": "git commit --amend -m \"Release v${npm_package_version}\""
