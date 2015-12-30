@@ -11,6 +11,7 @@ pids
 lib-cov
 
 # Coverage directory used by tools like istanbul
+.nyc_output
 coverage
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
@@ -21,6 +22,7 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+dist
 
 # Dependency directory
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
