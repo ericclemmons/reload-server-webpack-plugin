@@ -7,6 +7,13 @@
     "index.js",
     "build"
   ],
+  "config": {
+    "nyc": {
+      "exclude": [
+        "build"
+      ]
+    }
+  },
   "scripts": {
     "build": "babel src -d build",
     "changelog": "npm run changelog:generate && npm run changelog:add",
