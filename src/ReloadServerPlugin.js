@@ -24,7 +24,9 @@ export default class ReloadServerPlugin {
   }
 
   apply(compiler) {
-    compiler.plugin("after-emit", (compilation, callback) => {
+    compiler.hooks.afterEmit.tap({
+      name: 'reload-server',
+    }, (compilation, callback) => {
       this.done = callback;
       this.workers.forEach((worker) => {
         try {
