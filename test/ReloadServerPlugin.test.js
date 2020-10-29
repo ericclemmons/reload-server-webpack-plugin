@@ -51,15 +51,19 @@ describe("ReloadServerPlugin", function() {
   describe(".apply", function() {
     beforeEach(function() {
       this.compiler = {
-        plugin: expect.createSpy(),
+        hooks: {
+          afterEmit: {
+            tap: expect.createSpy()
+          },
+        }
       };
 
       this.plugin.apply(this.compiler);
     });
 
     it("should add an after-emit hook", function() {
-      expect(this.compiler.plugin).toHaveBeenCalled();
-      expect(this.compiler.plugin.calls[0].arguments[0]).toEqual("after-emit");
+      expect(this.compiler.hooks.afterEmit.tap).toHaveBeenCalled();
+      expect(this.compiler.hooks.afterEmit.tap.calls[0].arguments[0]).toEqual({ name: 'reload-server' });
     });
   });
 
@@ -67,11 +71,15 @@ describe("ReloadServerPlugin", function() {
     beforeEach(function() {
       this.callback = expect.createSpy();
       this.compiler = {
-        plugin: (event, callback) => {
-          expect(event).toEqual("after-emit");
+        hooks: {
+          afterEmit: {
+            tap: (event, callback) => {
+              expect(event.name).toEqual('reload-server');
 
-          callback({}, this.callback);
-        },
+              callback({}, this.callback);
+            },
+          },
+        }
       };
 
       this.kill = expect.spyOn(process, "kill");
